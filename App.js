@@ -1,4 +1,5 @@
 const httpRequest = new HttpLibrary();
+const pokeUi = new PokemonUi();
 
 const url = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -24,8 +25,7 @@ prevBtn.addEventListener('click', function(e){
 const getPokemon = id => {
 	httpRequest.get(url+id)
 	.then(data => {
-		console.log(data.name)
-
+		pokeUi.displayPokemon(data)
 		data.abilities.map(ability => {
 			console.log(ability.ability.name)
 			httpRequest.get(ability.ability.url)

@@ -1,3 +1,6 @@
 class PokemonUi {
 	
+	displayPokemon(data){
+
+	}
 }
