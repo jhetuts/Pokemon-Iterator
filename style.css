@@ -19,9 +19,10 @@ body{
     transform: translateY(-50%);
 }
 fieldset{
-	text-align: left;
-	padding: 20px;
-	margin-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    text-align: left;
 }
 legend{
 	font-size: 32px;

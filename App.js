@@ -25,19 +25,10 @@ prevBtn.addEventListener('click', function(e){
 const getPokemon = id => {
 	httpRequest.get(url+id)
 	.then(data => {
-		pokeUi.displayPokemon(data)
-		data.abilities.map(ability => {
-			console.log(ability.ability.name)
-			httpRequest.get(ability.ability.url)
-				.then(data => {
-					data.effect_entries.map(effect => {
-						console.log(effect.effect);
-					})
-				})
-		});
+		pokeUi.displayPokemon(data);
 	})
 	.catch(() => {
-		console.log("No pokemon found. Restart to 1")
+		console.log("No pokemon found. Restart to 1");
 		setTimeout(function(){
 			id = 1;
 			getPokemon(id);
@@ -55,6 +46,7 @@ const disabledButton = id => {
 		prevBtn.removeAttribute('disabled');
 	}
 }
+
 
 
 
