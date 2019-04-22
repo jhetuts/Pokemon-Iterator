@@ -7,16 +7,21 @@ class PokemonUi {
 
 		this.clearPokemon();
 
-		console.log(image)
-
-		console.log(data);
-
+		// Name
 		const fieldset = document.createElement('fieldset');
 		const legend = 	document.createElement('legend');
-		const ul = document.createElement('ul');
+
+		// Image
+		const imgWrapper = document.createElement('div');
 		const img = document.createElement('img');
 		img.setAttribute('src', image);
+		imgWrapper.appendChild(img);
+		imgWrapper.className = 'image-wrap'
 
+		// Abilities
+		const abilityTitle = document.createElement('h2');
+		abilityTitle.textContent = 'Abilities: ';
+		const ul = document.createElement('ul');
 		const abilities = data.abilities.map(ability => {
 			const li = document.createElement('li');
 			li.textContent = ability.ability.name;
@@ -26,7 +31,8 @@ class PokemonUi {
 
 		legend.textContent = data.name;
 		fieldset.appendChild(legend);
-		fieldset.appendChild(img);
+		fieldset.appendChild(imgWrapper);
+		fieldset.appendChild(abilityTitle);
 		fieldset.appendChild(ul);
 
 		this.pokemonContainer.appendChild(fieldset);

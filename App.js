@@ -2,7 +2,6 @@ const httpRequest = new HttpLibrary();
 const pokeUi = new PokemonUi();
 
 const url = 'https://pokeapi.co/api/v2/pokemon/';
-
 let id = 1;
 
 const nextBtn = document.getElementById('next-pokemon');
@@ -20,7 +19,6 @@ prevBtn.addEventListener('click', function(e){
 	getPokemon(id);
 
 });
-
 
 const getPokemon = id => {
 	httpRequest.get(url+id)
@@ -40,8 +38,6 @@ const getPokemon = id => {
 	});
 }
 
-
-
 const disabledButton = id => {
 	if(id <= 1){
 		id = 1;
@@ -50,9 +46,6 @@ const disabledButton = id => {
 		prevBtn.removeAttribute('disabled');
 	}
 }
-
-
-
 
 document.addEventListener('DOMContentLoaded', function(){
 	disabledButton(id);

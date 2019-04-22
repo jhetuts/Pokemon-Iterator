@@ -13,13 +13,16 @@ body{
 	top: 50%;
 	left: 0;
 	right: 0;
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-    transform: translateY(-50%);
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	transform: translateY(-50%);
 }
 h1{
 	margin-bottom: 20px;
+}
+h2{
+	text-align: left;
 }
 fieldset{
     display: block;
@@ -28,9 +31,13 @@ fieldset{
     text-align: center;
     text-transform: capitalize;
     transition: 1s ease-out;
-    border-radius: 2
+		border-radius: 2px;
+		min-height: 220px;
 }
-fieldset img{
+.image-wrap{
+	height: 96px;
+}
+.image-wrap img{
 	text-align: center;
 }
 legend{
@@ -38,7 +45,14 @@ legend{
 	font-size: 32px;
 }
 ul{
+	display: block;
 	text-align: left;
+	position: relative;
+	box-sizing: border-box;
+	padding: 5px 20px;
+}
+li{
+	box-sizing: border-box;
 }
 button{
 	width: 100px;
