@@ -25,7 +25,11 @@ prevBtn.addEventListener('click', function(e){
 const getPokemon = id => {
 	httpRequest.get(url+id)
 	.then(data => {
-		pokeUi.displayPokemon(data);
+
+		const imageUrl = 
+		httpRequest.get(data.forms[0].url)
+			.then(image => pokeUi.displayPokemon(data, image.sprites.front_default))
+			.catch(error => 'No image found!');
 	})
 	.catch(() => {
 		console.log("No pokemon found. Restart to 1");

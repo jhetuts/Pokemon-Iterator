@@ -13,19 +13,32 @@ body{
 	top: 50%;
 	left: 0;
 	right: 0;
-    width: 500px;
+    width: 300px;
     margin: 0 auto;
     text-align: center;
     transform: translateY(-50%);
+}
+h1{
+	margin-bottom: 20px;
 }
 fieldset{
     display: block;
     margin-bottom: 20px;
     padding: 20px 40px;
-    text-align: left;
+    text-align: center;
+    text-transform: capitalize;
+    transition: 1s ease-out;
+    border-radius: 2
+}
+fieldset img{
+	text-align: center;
 }
 legend{
+	text-align: left;
 	font-size: 32px;
+}
+ul{
+	text-align: left;
 }
 button{
 	width: 100px;
